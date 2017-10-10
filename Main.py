@@ -6,6 +6,14 @@ from tkinter import *
 import sqlite3
 import tkinter.ttk as ttk
 
+def Database():
+    global cursor, conn
+    cursor = sqlite3.connect("dbms.db")
+    cursor.commit()
+
+def DatabaseView():
+
+
 def Main():
     root = Tk()
     w = 450
@@ -17,5 +25,6 @@ def Main():
     root.geometry('%dx%d+%d+%d' % (w, h, x, y))
     root.title("Database Mangaement System Project")
     root.mainloop()
+
 
 Main()
